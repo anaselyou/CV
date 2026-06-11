@@ -1,6 +1,20 @@
 h1{
-    color: blue;
+    color: cornflowerblue;
+}
+h2{
+    color: lightblue;
+}
+
+h3{
+    color: lightblue;
+}
+
+h4{
+    color: lightblue;
 }
 p{
-    color: red;
+    color: white;
+}
+li{
+    color: grey;
 }
