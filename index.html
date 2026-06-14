@@ -5,17 +5,23 @@
         <meta charset="UTF-8">
         <title>CV</title>
 
+        <!-- Supporte les modes clair et sombre selon le système -->
         <meta name="color-scheme" content="light dark">
+        <!-- Adaptation mobile - zoom à 1x, largeur = écran -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="author" content="Luciole Dev">
         <meta name="description" content = "Mon curriculum vitae">
+
+        <!-- noindex = ne pas indexer | nofollow = ne pas suivre les liens -->
         <meta name="robots" content = "noindex, nofollow">
+        <!-- Appel unique du fichier CSS externe -->
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
     <body>
         <main>
+            <!-- Colonne gauche : infos secondaires -->
             <aside>
                 <h2>Profil</h2>
                 <hr>
@@ -34,7 +40,9 @@
                 <p>Cuisine gastronomique, veille technologique, histoire et tennis de table.</p>
             </aside>
 
+            <!-- Colonne droite : contenu principal du CV -->
             <section>
+                <!-- En-tête nom + titre -->
                 <header>
                     <hgroup>
                         <h1>XXX</h1>
@@ -43,19 +51,25 @@
                 </header>
                     <h2>FORMATION</h2>
                     <hr>
-
+                <!-- Bloc formation - texte en gras via .formation-item -->
+                <div class="formation-item">
                     <p>2026 - 2029: Bachelier informatique développement app et web</p>
                     <p>2024 - 2025: Roger Lambion restaurateur cours du soir</p>
                     <p>2018 : CESS électricien installateur industriel et maintenance d'équipements techniques</p>
+                </div>
 
                     <h2>EXPÉRIENCES</h2>
                     <hr>
+                <!-- Bloc expérience : une div.experience par poste -->
                     <div class="experience">
+                        <!-- Colonne gauche : date + entreprise -->
                         <div class="experience-gauche">
-                            <p>2018 - Présent</p>
+                            <div class="sous-titre">
+                                <p>2018 - Présent</p>
+                            </div>
                             <p>XXX</p>
                         </div>
-
+                        <!-- Colonne droite : poste + compétences -->
                         <div class="experience-droite">
                             <h3>Technicien de maintenance signalisation</h3>
                             <ul>
@@ -66,10 +80,11 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="experience">
                         <div class="experience-gauche">
-                            <p>2013 - 2018</p>
+                            <div class="sous-titre">
+                                <p>2013 - 2018</p>
+                            </div>
                             <p>XXX</p>
                         </div>
                         <div class="experience-droite">
@@ -84,8 +99,11 @@
 
                     <div class="experience">
                         <div class="experience-gauche">
-                            <p>2016 </p>
+                            <div class="sous-titre">
+                                <p>2016 </p>
+                            </div>
                             <p>XXX</p>
+
                         </div>
                         <div class="experience-droite">
                             <h3>Stage - Électricien installateur</h3>
@@ -96,8 +114,7 @@
                     </div>
 
                     <h2>COMPÉTENCES</h2>
-                    <hr>
-
+                    <hr><!-- Bloc compétences : deux colonnes côte à côte -->
                     <div class="competence">
                         <div>
                             <h3>Langues</h3>
@@ -112,8 +129,9 @@
                             <p>Suite Microsoft Office</p>
                             <p>Jetbrain suite </p>
                             <p>Git et Github(CLI)</p>
-                            <p>Notion(pilotage projet)</p>
-                            <p>Draw.io</p>
+                            <p>Docker (CLI)</p>
+                            <p>Jira</p>
+
                         </div>
                     </div>
 

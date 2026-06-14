@@ -1,39 +1,127 @@
+/* ============================================
+   RESET
+   Neutralise les styles par défaut du navigateur
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* inclut padding et border dans la largeur totale */
 }
+
+/* ============================================
+   VARIABLES GLOBALES
+   Centralise couleurs, fonts - modifier ici = modifier partout
+   ============================================ */
 :root {
-    --color-primary: #2c3e50;
-    --color-accent: #2980b9;
-    --color-text: #333333;
-    --color-light: #f5f5f5;
-    --color-border: #dddddd;
-    --font-main: 'Segoe UI', Arial, sans-serif;
+    --color-primary: #2c3e50;       /* couleur principale - aside */
+    --color-accent: #2980b9;        /* couleur accent - hr, titres */
+    --color-text: #333333;          /* couleur texte global */
+    --color-light: #f5f5f5;         /* fond de page */
+    --color-border: #dddddd;        /* couleur bordures */
+    --font-main: 'Segoe UI', Arial, sans-serif; /* font globale avec fallbacks */
 }
+
+/* ============================================
+   BASE
+   Styles globaux appliqués à tout le document
+   ============================================ */
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-light);
+    font-size: 1rem;        /* base 16px navigateur */
+    line-height: 1.6;       /* interligne pour la lisibilité */
+}
+
+/* ============================================
+   ÉLÉMENTS GLOBAUX
+   ============================================ */
+
+/* Centrage du nom et titre - colonne droite */
+hgroup {
+    text-align: center;
+    padding: 2rem 0;
+}
+hgroup p {
+    font-size: 1.2rem; /* sous-titre légèrement plus grand que la base */
+}
+
+/* Séparateur de sections - trait coloré court */
+hr {
+    border: none;
+    width: 15%;                                 /* longueur du trait */
+    border-top: 4px solid var(--color-accent);  /* épaisseur et couleur */
+    margin: 0.5rem 0 1rem 0;                    /* espace haut / bas */
+}
+
+/* ============================================
+   LAYOUT PRINCIPAL
+   ============================================ */
+
+/* Conteneur central - deux colonnes via Flexbox */
+main {
+    display: flex;
+    max-width: 960px;           /* largeur max du CV */
+    margin: 2rem auto;          /* centré horizontalement */
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* ombre portée légère */
+}
+
+/* Colonne gauche - infos secondaires */
+aside {
+    width: 30%;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 10rem 1.5rem; /* padding-top élevé - espace réservé pour le logo */
+}
+
+/* Colonne droite - contenu principal */
+section {
+    width: 70%;
+    padding: 2rem 1.5rem;
+}
+
+/* Pied de page centré et aligné avec le main */
+footer {
+    max-width: 960px;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+/* ============================================
+   COMPOSANTS
+   ============================================ */
+
+/* Bloc expérience - une instance par poste */
 .experience {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* espace entre chaque expérience */
 }
+
+/* Date + entreprise */
 .experience-gauche {
     width: 30%;
     font-size: 0.85rem;
     color: #666666;
 }
 
+/* Poste + liste de compétences */
 .experience-droite {
     width: 70%;
     padding-left: 1.2rem;
 }
-
 .experience-droite h3 {
     margin-left: 0;
 }
+/* Indentation des puces */
 .experience-droite ul {
     padding-left: 1.2rem;
 }
 
+/* Bloc compétences - deux colonnes côte à côte */
 .competence {
     display: flex;
     gap: 2rem;
@@ -42,44 +130,16 @@
     width: 50%;
 }
 
-hgroup {
-    text-align: center;
-    padding: 2rem 0;
-}
-hgroup p {
-    font-size: 1.2rem;
+/* ============================================
+   UTILITAIRES
+   ============================================ */
+
+/* Texte en gras - utilisé sur les items de formation */
+.formation-item {
+    font-weight: bold;
 }
 
-hr {
-    border: none;
-    width: 15%;
-    border-top: 4px solid var(--color-accent);
-    margin: 0.5rem 0 1rem 0;
-}
-body {
-    font-family: var(--font-main);
-    color: var(--color-text);
-    background-color: var(--color-light);
-    font-size: 1rem;
-    line-height: 1.6;
-
-}
-
-main{
-    display: flex;
-    max-width: 960px;
-    margin: 2rem auto;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-aside{
-    width: 30%;
-    background-color: var(--color-primary);
-    color: #ffffff;
-    padding: 10rem 1.5rem;
-
-}
-section{
-    width: 70%;
-    padding: 2rem 1.5rem;
+/* Date en gras dans l'expérience */
+.sous-titre {
+    font-weight: bold;
 }
