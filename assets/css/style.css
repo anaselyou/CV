@@ -159,3 +159,47 @@ aside a:hover {
     color: var(--color-accent);
 }
 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablette */
+@media (max-width: 768px) {
+    aside {
+        width: 40%;
+    }
+    section {
+        width: 60%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    main {
+        flex-direction: column;
+        margin: 0;
+    }
+    aside {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+    section {
+        width: 100%;
+    }
+    .experience {
+        flex-direction: column;
+    }
+    .experience-gauche {
+        width: 100%;
+    }
+    .experience-droite {
+        width: 100%;
+    }
+    .competence {
+        flex-direction: column;
+    }
+    .competence div {
+        width: 100%;
+    }
+}
+
