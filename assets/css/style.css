@@ -18,7 +18,9 @@
     --color-text: #333333;          /* couleur texte global */
     --color-light: #f5f5f5;         /* fond de page */
     --color-border: #dddddd;        /* couleur bordures */
-    --font-main: 'Segoe UI', Arial, sans-serif; /* font globale avec fallbacks */
+    --font-main: 'Inter', sans-serif; /* font globale avec fallbacks */
+    --font-heading: 'Raleway', sans-serif;
+
 }
 
 /* ============================================
@@ -54,6 +56,9 @@ hr {
     margin: 0.5rem 0 1rem 0;                    /* espace haut / bas */
 }
 
+h1, h2 {
+    font-family: var(--font-heading);
+}
 h2 {
     margin-top: 1.5rem;
 }
